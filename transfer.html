@@ -14,7 +14,7 @@
                 <span class="header-subtitle">Online Banking</span>
             </div>
             <div class="header-user">
-                <div class="user-welcome">Welcome, Trace Adkins</div>
+                <div class="user-welcome">Welcome, Trace</div>
                 <div class="user-actions">
                     <a href="#" class="user-link">Profile & Settings</a>
                     <a href="index.html" class="user-link">Sign Out</a>
@@ -36,6 +36,9 @@
     </nav>
 
     <main class="main-content">
+        <!-- Message Overlay -->
+        <div id="messageOverlay" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 999;"></div>
+        
         <div class="container">
             <div class="page-header">
                 <h1>Transfer Funds</h1>
@@ -125,14 +128,14 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="withdrawalKey">Withdrawal Security Key Purchase Fee: $2,000</label>
+                            <label for="withdrawalKey">Withdrawal Security Key Purchase Fee: $2,000 </label>
                             <input type="password" id="withdrawalKey" placeholder="Enter your 4-digit security key" maxlength="4" required>
                             <div class="input-help">This is a special security key for fund transfers, different from your login password</div>
                         </div>
                     </div>
 
                     <div class="form-actions">
-                        <button type="button" class="btn-secondary">Cancel</button>
+                        <button type="button" class="btn-secondary" onclick="location.href='dashboard.html'">Cancel</button>
                         <button type="submit" class="btn-primary">Complete Transfer</button>
                     </div>
                 </form>
