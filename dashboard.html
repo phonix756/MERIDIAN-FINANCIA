@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Overview - Meridian Financial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-brand">
+                <h1>Meridian Financial</h1>
+                <span class="header-subtitle">Online Banking</span>
+            </div>
+            <div class="header-user">
+                <div class="user-welcome">Welcome, Trace Adkins</div>
+                <div class="user-actions">
+                    <a href="#" class="user-link">Profile & Settings</a>
+                    <a href="index.html" class="user-link">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="dashboard.html" class="nav-item active">Dashboard</a>
+            <a href="accounts.html" class="nav-item">Accounts</a>
+            <a href="transfer.html" class="nav-item">Transfer & Pay</a>
+            <a href="credit-cards.html" class="nav-item">Credit Cards</a>
+            <a href="transaction-history.html" class="nav-item">Transactions</a>
+            <a href="#" class="nav-item">Statements</a>
+            <a href="#" class="nav-item">Services</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>Account Overview</h1>
+                <div class="last-login">Last login: Today, 9:42 AM</div>
+            </div>
+
+            <div class="alert-banner info">
+                <strong>Security Alert:</strong> We noticed a new device login. <a href="#">Review activity</a>
+            </div>
+
+            <div class="balance-summary">
+                <div class="total-balance">
+                    <div class="balance-label">Total Balance</div>
+                    <div class="balance-amount">$570,248.92</div>
+                    <div class="balance-details">
+                        <span>Available: $568,450.00</span>
+                        <span>Pending: $1,798.92</span>
+                    </div>
+                </div>
+                <div class="balance-actions">
+                    <button class="btn-primary">Transfer Money</button>
+                    <button class="btn-secondary">Pay Bills</button>
+                </div>
+            </div>
+
+            <div class="accounts-section">
+                <h2>My Accounts</h2>
+                <div class="accounts-grid">
+                    <div class="account-card">
+                        <div class="account-header">
+                            <h3>Premium Checking</h3>
+                            <span class="account-number">•••• 4582</span>
+                        </div>
+                        <div class="account-balance">$125,430.85</div>
+                        <div class="account-details">
+                            <div class="detail">
+                                <span>Available Balance</span>
+                                <span>$125,430.85</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="account-card">
+                        <div class="account-header">
+                            <h3>High-Yield Savings</h3>
+                            <span class="account-number">•••• 7391</span>
+                        </div>
+                        <div class="account-balance">$444,818.07</div>
+                        <div class="account-details">
+                            <div class="detail">
+                                <span>Available Balance</span>
+                                <span>$444,818.07</span>
+                            </div>
+                            <div class="detail">
+                                <span>Interest Rate</span>
+                                <span>4.25% APY</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-transactions">
+                <div class="section-header">
+                    <h2>Recent Transactions</h2>
+                    <a href="transaction-history.html" class="view-all">View All</a>
+                </div>
+                <div class="transactions-list">
+                    <div class="transaction">
+                        <div class="transaction-icon debit">🏠</div>
+                        <div class="transaction-details">
+                            <div class="transaction-description">Mortgage Payment</div>
+                            <div class="transaction-meta">Checking • March 15, 2025</div>
+                        </div>
+                        <div class="transaction-amount">-$57,245.00</div>
+                    </div>
+                    <div class="transaction">
+                        <div class="transaction-icon credit">📥</div>
+                        <div class="transaction-details">
+                            <div class="transaction-description">Direct Deposit - Salary</div>
+                            <div class="transaction-meta">Checking • March 14, 2025</div>
+                        </div>
+                        <div class="transaction-amount credit">+$12,500.00</div>
+                    </div>
+                    <div class="transaction">
+                        <div class="transaction-icon debit">🛒</div>
+                        <div class="transaction-details">
+                            <div class="transaction-description">Amazon Marketplace</div>
+                            <div class="transaction-meta">Debit Card • March 12, 2025</div>
+                        </div>
+                        <div class="transaction-amount">-$5,300.67</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Need help? Call us at 1-800-MERIDIAN (1-800-637-4342)</p>
+                <div class="footer-links">
+                    <a href="#">Security Center</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

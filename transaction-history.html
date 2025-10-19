@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History - Meridian Financial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-brand">
+                <h1>Meridian Financial</h1>
+                <span class="header-subtitle">Online Banking</span>
+            </div>
+            <div class="header-user">
+                <div class="user-welcome">Welcome, Trace Adkins</div>
+                <div class="user-actions">
+                    <a href="#" class="user-link">Profile & Settings</a>
+                    <a href="index.html" class="user-link">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="dashboard.html" class="nav-item">Dashboard</a>
+            <a href="accounts.html" class="nav-item">Accounts</a>
+            <a href="transfer.html" class="nav-item">Transfer & Pay</a>
+            <a href="credit-cards.html" class="nav-item">Credit Cards</a>
+            <a href="transaction-history.html" class="nav-item active">Transactions</a>
+            <a href="#" class="nav-item">Statements</a>
+            <a href="#" class="nav-item">Services</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>Transaction History</h1>
+                <p>View and search your account transactions</p>
+            </div>
+
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="accountFilter">Account</label>
+                    <select id="accountFilter">
+                        <option>All Accounts</option>
+                        <option>Premium Checking (••••4582)</option>
+                        <option>High-Yield Savings (••••7391)</option>
+                        <option>Credit Cards</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="dateFilter">Date Range</label>
+                    <select id="dateFilter">
+                        <option>Last 30 Days</option>
+                        <option>Last 90 Days</option>
+                        <option>Last 6 Months</option>
+                        <option>Year to Date</option>
+                        <option>Custom Range</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="typeFilter">Transaction Type</label>
+                    <select id="typeFilter">
+                        <option>All Transactions</option>
+                        <option>Deposits</option>
+                        <option>Withdrawals</option>
+                        <option>Transfers</option>
+                        <option>Payments</option>
+                        <option>Purchases</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="searchFilter">Search</label>
+                    <input type="text" id="searchFilter" placeholder="Search by description or amount">
+                </div>
+
+                <button class="btn-filter">Apply Filters</button>
+            </div>
+
+            <div class="transactions-summary">
+                <div class="summary-card">
+                    <div class="summary-label">Total Transactions</div>
+                    <div class="summary-value">47</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">Total Deposits</div>
+                    <div class="summary-value credit">$700,950.00</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">Total Withdrawals</div>
+                    <div class="summary-value debit">$40,319.21</div>
+                </div>
+            </div>
+
+            <div class="transactions-table-container">
+                <div class="table-actions">
+                    <button class="btn-export">Export to CSV</button>
+                    <button class="btn-print">Print Statement</button>
+                </div>
+
+                <div class="transactions-table">
+                    <div class="table-header">
+                        <div class="col-date">Date</div>
+                        <div class="col-description">Description</div>
+                        <div class="col-category">Category</div>
+                        <div class="col-account">Account</div>
+                        <div class="col-amount">Amount</div>
+                        <div class="col-balance">Balance</div>
+                    </div>
+
+                    <div class="table-section">
+                        <div class="section-header">March 2024</div>
+                        
+                        <div class="table-row">
+                            <div class="col-date">03/20/2025</div>
+                            <div class="col-description">
+                                <div class="desc-main">Amazon Marketplace</div>
+                                <div class="desc-sub">Online Purchase</div>
+                            </div>
+                            <div class="col-category">Shopping</div>
+                            <div class="col-account">Debit Card</div>
+                            <div class="col-amount debit">-$245,000.67</div>
+                            <div class="col-balance">$125,430.85</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="col-date">03/19/2025</div>
+                            <div class="col-description">
+                                <div class="desc-main">Chicago O'Hare International Airlines</div>
+                                <div class="desc-sub">Flight Booking</div>
+                            </div>
+                            <div class="col-category">Travel</div>
+                            <div class="col-account">Platinum Card</div>
+                            <div class="col-amount debit">-$84,000.50</div>
+                            <div class="col-balance">$125,676.52</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="col-date">03/18/2024</div>
+                            <div class="col-description">
+                                <div class="desc-main">Direct Deposit</div>
+                                <div class="desc-sub">Tech Solutions Inc.</div>
+                            </div>
+                            <div class="col-category">Income</div>
+                            <div class="col-account">Checking</div>
+                            <div class="col-amount credit">+$8,450.00</div>
+                            <div class="col-balance">$126,522.02</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="col-date">05/18/2025</div>
+                            <div class="col-description">
+                                <div class="desc-main">Marriott International</div>
+                                <div class="desc-sub">Hotel Stay</div>
+                            </div>
+                            <div class="col-category">Travel</div>
+                            <div class="col-account">Platinum Card</div>
+                            <div class="col-amount debit">-$34,020.25</div>
+                            <div class="col-balance">$118,072.02</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="col-date">05/16/2025</div>
+                            <div class="col-description">
+                                <div class="desc-main">Costco Wholesale</div>
+                                <div class="desc-sub">Membership & Purchases</div>
+                            </div>
+                            <div class="col-category">Shopping</div>
+                            <div class="col-account">Gold Card</div>
+                            <div class="col-amount debit">-$450,000.80</div>
+                            <div class="col-balance">$118,392.27</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="col-date">06/15/2025</div>
+                            <div class="col-description">
+                                <div class="desc-main">Mortgage Payment</div>
+                                <div class="desc-sub">Auto Pay</div>
+                            </div>
+                            <div class="col-category">Housing</div>
+                            <div class="col-account">Checking</div>
+                            <div class="col-amount debit">-$30,245.00</div>
+                            <div class="col-balance">$118,843.07</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="col-date">07/14/2025</div>
+                            <div class="col-description">
+                                <div class="desc-main">Direct Deposit</div>
+                                <div class="desc-sub">Salary</div>
+                            </div>
+                            <div class="col-category">Income</div>
+                            <div class="col-account">Checking</div>
+                            <div class="col-amount credit">+$12,500.00</div>
+                            <div class="col-balance">$122,088.07</div>
+                        </div>
+                    </div>
+
+                    <div class="table-section">
+                        <div class="section-header">February 5</div>
+                        <!-- Additional transactions can be added here -->
+                    </div>
+                </div>
+
+                <div class="table-pagination">
+                    <button class="btn-pagination prev" disabled>Previous</button>
+                    <div class="pagination-info">Page 1 of 3</div>
+                    <button class="btn-pagination next">Next</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Need help? Call us at 1-800-MERIDIAN (1-800-637-4342)</p>
+                <div class="footer-links">
+                    <a href="#">Security Center</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

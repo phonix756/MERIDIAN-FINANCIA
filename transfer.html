@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Funds - Meridian Financial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-brand">
+                <h1>Meridian Financial</h1>
+                <span class="header-subtitle">Online Banking</span>
+            </div>
+            <div class="header-user">
+                <div class="user-welcome">Welcome, Trace Adkins</div>
+                <div class="user-actions">
+                    <a href="#" class="user-link">Profile & Settings</a>
+                    <a href="index.html" class="user-link">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="dashboard.html" class="nav-item">Dashboard</a>
+            <a href="accounts.html" class="nav-item">Accounts</a>
+            <a href="transfer.html" class="nav-item active">Transfer & Pay</a>
+            <a href="credit-cards.html" class="nav-item">Credit Cards</a>
+            <a href="transaction-history.html" class="nav-item">Transactions</a>
+            <a href="#" class="nav-item">Statements</a>
+            <a href="#" class="nav-item">Services</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>Transfer Funds</h1>
+                <p>Move money between your accounts or send to others</p>
+            </div>
+
+            <div class="transfer-container">
+                <form class="transfer-form" id="transferForm">
+                    <div class="form-section">
+                        <h3>Transfer Details</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fromAccount">From Account</label>
+                                <select id="fromAccount" required>
+                                    <option value="">Select funding account</option>
+                                    <option value="checking">Premium Checking (••••4582) - $125,430.85</option>
+                                    <option value="savings">High-Yield Savings (••••7391) - $444,818.07</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="amount">Amount</label>
+                                <div class="amount-input">
+                                    <span class="currency">$</span>
+                                    <input type="number" id="amount" placeholder="0.00" min="0.01" step="0.01" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="transferType">Transfer Type</label>
+                            <select id="transferType" required>
+                                <option value="">Select transfer type</option>
+                                <option value="internal">Between My Accounts</option>
+                                <option value="external">Send to Another Bank</option>
+                                <option value="wire">Wire Transfer</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section" id="externalDetails" style="display: none;">
+                        <h3>Recipient Bank Information</h3>
+                        
+                        <div class="form-group">
+                            <label for="recipientName">Recipient Name</label>
+                            <input type="text" id="recipientName" placeholder="Full name as it appears on bank account">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="recipientBank">Bank Name</label>
+                            <input type="text" id="recipientBank" placeholder="Recipient's bank name">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="routingNumber">Routing Number</label>
+                                <input type="text" id="routingNumber" placeholder="9-digit routing number" maxlength="9">
+                                <div class="input-help">Find this on your check or bank statement</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="accountNumber">Account Number</label>
+                                <input type="text" id="accountNumber" placeholder="Recipient's account number">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="accountType">Account Type</label>
+                            <select id="accountType">
+                                <option value="">Select account type</option>
+                                <option value="checking">Checking</option>
+                                <option value="savings">Savings</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Security Verification</h3>
+                        
+                        <div class="security-notice">
+                            <div class="notice-icon">🔒</div>
+                            <div class="notice-content">
+                                <strong>Enhanced Security Required</strong>
+                                <p>For your protection, please enter your withdrawal security key to complete this transaction.</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="withdrawalKey">Withdrawal Security Key Purchase Fee: $2,000</label>
+                            <input type="password" id="withdrawalKey" placeholder="Enter your 4-digit security key" maxlength="4" required>
+                            <div class="input-help">This is a special security key for fund transfers, different from your login password</div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary">Cancel</button>
+                        <button type="submit" class="btn-primary">Complete Transfer</button>
+                    </div>
+                </form>
+
+                <div class="transfer-summary">
+                    <h3>Transfer Summary</h3>
+                    <div class="summary-details">
+                        <div class="summary-item">
+                            <span>Transfer From:</span>
+                            <span id="summaryFrom">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Transfer To:</span>
+                            <span id="summaryTo">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Amount:</span>
+                            <span id="summaryAmount">$0.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Processing:</span>
+                            <span>Immediate</span>
+                        </div>
+                        <div class="summary-item fee">
+                            <span>Fee:</span>
+                            <span class="no-fee">No fee</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Need help? Call us at 1-800-MERIDIAN (1-800-637-4342)</p>
+                <div class="footer-links">
+                    <a href="#">Security Center</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
